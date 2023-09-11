@@ -14,7 +14,7 @@ import com.amazon.base.BasePage;
 
 public class SignInPage extends BasePage {
 	
-	//static WebDriver driver;
+	static WebDriver driver;
 	String enterKey;
 		public SignInPage(WebDriver driver) {
 			

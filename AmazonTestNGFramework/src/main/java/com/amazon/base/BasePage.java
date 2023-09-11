@@ -19,7 +19,7 @@ public class BasePage {
 	//Constructor
 	public BasePage (WebDriver driver) {
 		
-		
+		System.out.println(" this.driver "+this.driver);
 		this.driver = driver;
 		
 		PageFactory.initElements(driver, this); // Initialise all the elements
