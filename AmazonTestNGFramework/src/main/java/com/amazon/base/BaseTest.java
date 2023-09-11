@@ -8,6 +8,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import com.amazon.utilities.CommonUtilities;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class BaseTest {
 	WebDriver driver;
 	CommonUtilities utilities = new CommonUtilities();
@@ -16,11 +18,11 @@ public class BaseTest {
 		System.out.println("test browser : "+ browser);
 		
 		if(browser.equalsIgnoreCase("chrome")) {
-			//WebDriverManager.chromedriver().setup();
+			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 			
 		}else if(browser.equalsIgnoreCase("firefox")) {
-			//WebDriverManager.firefoxdriver().setup();
+			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 		}
 		
